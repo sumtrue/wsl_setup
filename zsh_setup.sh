@@ -21,6 +21,9 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
+# tig
+sudo apt install -y tig
+
 # nodebrew
 curl -L git.io/nodebrew | perl - setup
 
