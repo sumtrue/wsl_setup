@@ -12,6 +12,7 @@ cd ~
 # dotfiles
 git clone https://github.com/sumtrue/dotfiles.git
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
@@ -23,6 +24,9 @@ done
 
 # tig
 sudo apt install -y tig
+
+# tmux
+sudo apt install -y tmux
 
 # nodebrew
 curl -L git.io/nodebrew | perl - setup
