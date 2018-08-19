@@ -28,6 +28,14 @@ sudo apt install -y tig
 # tmux
 sudo apt install -y tmux
 
+# docker
+curl -O https://download.docker.com/linux/debian/dists/stretch/pool/stable/amd64/docker-ce_17.09.0~ce-0~debian_amd64.deb
+sudo dpkg -i docker-ce_17.09.0\~ce-0\~debian_amd64.deb
+rm -f docker-ce_17.09.0\~ce-0\~debian_amd64.deb
+
+sudo cgroupfs-mount
+sudo usermod -aG docker $USER
+
 # nodebrew
 curl -L git.io/nodebrew | perl - setup
 
